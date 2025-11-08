@@ -1,0 +1,467 @@
+/* ==========================================
+   BIBLIOTECA INFINITA - ACCADEMIA ARCANIS
+   Design Minimal & Elegante
+   ========================================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ==========================================
+   COLOR PALETTE - Minimal & Sobrio
+   ========================================== */
+:root {
+    --bg-dark: #0f1419;
+    --bg-medium: #1a1f2e;
+    --text-primary: #e8e6e3;
+    --text-secondary: #a0a0a0;
+    --accent-gold: #d4af37;
+    --accent-blue: #4a90e2;
+    --border-subtle: rgba(212, 175, 55, 0.15);
+}
+
+/* ==========================================
+   GLOBAL STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-medium) 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+header {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+header .custode {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    margin-top: 0.5rem;
+}
+
+/* Eight Winds - Minimal */
+.winds-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.wind-symbol {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.wind-symbol:hover {
+    opacity: 1;
+}
+
+.wind-aqshy { background: #dc143c; }
+.wind-azyr { background: #4169e1; }
+.wind-chamon { background: #ffd700; }
+.wind-ghur { background: #cd853f; }
+.wind-ghyran { background: #228b22; }
+.wind-hysh { background: #f0f8ff; }
+.wind-shyish { background: #9370db; }
+.wind-ulgu { background: #708090; }
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.intro p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.intro em {
+    display: block;
+    margin-top: 1.5rem;
+    color: var(--text-primary);
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   LIBRARY SHELF - Minimal Grid
+   ========================================== */
+.library-shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.book-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--accent-gold);
+    transform: translateY(-4px);
+}
+
+.book-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.book-card h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.book-card .author {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 1.2rem;
+}
+
+.book-card .description {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+/* Subtle left border accent */
+.book-card.chronicon { border-left: 3px solid rgba(240, 248, 255, 0.4); }
+.book-card.gentibus { border-left: 3px solid rgba(65, 105, 225, 0.4); }
+.book-card.cataclisma { border-left: 3px solid rgba(220, 20, 60, 0.4); }
+.book-card.teclis { border-left: 3px solid rgba(255, 215, 0, 0.4); }
+
+/* ==========================================
+   BOOK PAGE - Clean Reading Experience
+   ========================================== */
+.book-container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.book-header {
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.book-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.book-meta {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0.4rem 0;
+}
+
+.book-meta strong {
+    color: var(--text-primary);
+}
+
+/* Book Content Typography */
+.book-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.book-content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.book-content h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin: 2.5rem 0 1rem;
+}
+
+.book-content h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin: 2rem 0 0.8rem;
+    opacity: 0.9;
+}
+
+.book-content p {
+    margin-bottom: 1.2rem;
+}
+
+.book-content blockquote {
+    border-left: 3px solid var(--accent-blue);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.book-content ul,
+.book-content ol {
+    margin: 1.5rem 0 1.5rem 2rem;
+}
+
+.book-content li {
+    margin-bottom: 0.6rem;
+}
+
+.book-content strong {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+.book-content em {
+    color: var(--text-secondary);
+}
+
+.book-content table {
+    width: 100%;
+    margin: 2rem 0;
+    border-collapse: collapse;
+}
+
+.book-content th,
+.book-content td {
+    border: 1px solid var(--border-subtle);
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.book-content th {
+    background: rgba(212, 175, 55, 0.05);
+    color: var(--accent-gold);
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+.book-content hr {
+    border: none;
+    border-top: 1px solid var(--border-subtle);
+    margin: 2.5rem 0;
+}
+
+/* ==========================================
+   BUTTONS & NAVIGATION - Minimal
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.btn-back {
+    margin-bottom: 2rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.nav-button {
+    flex: 1;
+    text-align: center;
+}
+
+/* ==========================================
+   FOOTER - Minimal
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    margin-top: 5rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+footer p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-winds {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+}
+
+.footer-wind {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.footer-wind:hover {
+    opacity: 0.8;
+}
+
+/* ==========================================
+   SPECIAL ELEMENTS - Minimal
+   ========================================== */
+.rune-decoration {
+    text-align: center;
+    margin: 3rem 0;
+    opacity: 0.2;
+    font-size: 1rem;
+    letter-spacing: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Note Box - Clean */
+section[style*="background"] {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+}
+
+section h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--accent-gold);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .subtitle {
+        font-size: 1rem;
+    }
+
+    .library-shelf {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .book-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .book-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .book-content {
+        font-size: 1rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .nav-button {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus states for keyboard navigation */
+a:focus,
+.btn:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}

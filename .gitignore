@@ -1,0 +1,31 @@
+# ==========================================
+# .gitignore per Avventura - WFRP 4E
+# Solo il sito web (docs/) viene tracciato
+# ==========================================
+
+# Ignora TUTTO
+/*
+
+# ECCETTO la cartella docs/ (sito web)
+!docs/
+!.gitignore
+!.git/
+
+# All'interno di docs/, ignora eventuali file temporanei
+docs/**/*.tmp
+docs/**/*.bak
+docs/**/.DS_Store
+docs/**/Thumbs.db
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+._*
+
+# Editor Files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
