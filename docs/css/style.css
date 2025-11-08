@@ -41,9 +41,25 @@ body {
    HEADER
    ========================================== */
 header {
+    position: relative;
     text-align: center;
     padding: 4rem 2rem 3rem;
     border-bottom: 1px solid var(--border-subtle);
+}
+
+.home-icon {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    vertical-align: middle;
+}
+
+.home-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 header h1 {
@@ -289,6 +305,9 @@ main {
     width: 100%;
     margin: 2rem 0;
     border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .book-content th,
@@ -332,10 +351,6 @@ main {
     border-color: var(--accent-gold);
     color: var(--accent-gold);
     background: rgba(212, 175, 55, 0.05);
-}
-
-.btn-back {
-    margin-bottom: 2rem;
 }
 
 .navigation {
@@ -413,6 +428,11 @@ section h3 {
    RESPONSIVE DESIGN
    ========================================== */
 @media (max-width: 768px) {
+    .home-icon {
+        font-size: 1.5rem;
+        margin-right: 0.4rem;
+    }
+
     header h1 {
         font-size: 2rem;
     }
@@ -436,6 +456,17 @@ section h3 {
 
     .book-content {
         font-size: 1rem;
+    }
+
+    /* Tabelle più leggibili su mobile */
+    .book-content table {
+        font-size: 0.85rem;
+    }
+
+    .book-content th,
+    .book-content td {
+        padding: 0.5rem;
+        min-width: 100px;
     }
 
     .navigation {
