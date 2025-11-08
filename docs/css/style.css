@@ -17,6 +17,17 @@
     --accent-gold: #d4af37;
     --accent-blue: #4a90e2;
     --border-subtle: rgba(212, 175, 55, 0.15);
+
+    /* Ambientazione Theme - Bronze/Copper */
+    --accent-bronze: #cd7f32;
+    --accent-copper: #b87333;
+    --border-bronze: rgba(205, 127, 50, 0.15);
+
+    /* Anello d'Argento Theme - Silver/Blue/Purple */
+    --accent-silver: #c0c0c0;
+    --accent-silver-blue: #a8c5dd;
+    --accent-lavender: #b19cd9;
+    --border-silver: rgba(192, 192, 192, 0.2);
 }
 
 /* ==========================================
@@ -203,6 +214,74 @@ main {
 .book-card.gentibus { border-left: 3px solid rgba(65, 105, 225, 0.4); }
 .book-card.cataclisma { border-left: 3px solid rgba(220, 20, 60, 0.4); }
 .book-card.teclis { border-left: 3px solid rgba(255, 215, 0, 0.4); }
+
+/* ==========================================
+   AMBIENTAZIONE SECTION - Bronze Theme
+   ========================================== */
+.ambientazione-card {
+    border-left: 3px solid rgba(205, 127, 50, 0.4);
+}
+
+.ambientazione-card:hover {
+    border-color: var(--accent-bronze);
+}
+
+.ambientazione-card h2 {
+    color: var(--accent-bronze);
+}
+
+/* District variants - subtle color distinctions */
+.district-porto { border-left: 3px solid rgba(74, 144, 226, 0.4); } /* Blue - sky/sea */
+.district-fucine { border-left: 3px solid rgba(220, 20, 60, 0.4); } /* Red - fire/forge */
+.district-fornelli { border-left: 3px solid rgba(255, 165, 0, 0.4); } /* Orange - food/warmth */
+.district-lamenti { border-left: 3px solid rgba(105, 105, 105, 0.4); } /* Gray - despair */
+.district-librai { border-left: 3px solid rgba(147, 112, 219, 0.4); } /* Purple - knowledge */
+.district-botteghe { border-left: 3px solid rgba(34, 139, 34, 0.4); } /* Green - commerce */
+.district-guardia { border-left: 3px solid rgba(178, 34, 34, 0.4); } /* Dark red - authority */
+.district-sussurri { border-left: 3px solid rgba(72, 61, 139, 0.4); } /* Dark blue - mystery */
+
+/* ==========================================
+   ANELLO D'ARGENTO - Silver Theme
+   ========================================== */
+.argento-card {
+    border-left: 3px solid rgba(192, 192, 192, 0.5);
+}
+
+.argento-card:hover {
+    border-color: var(--accent-silver);
+}
+
+.argento-card h2 {
+    color: var(--accent-silver);
+}
+
+/* Quartieri Argento - refined silver/blue/purple shades */
+.quartiere-arti { border-left: 3px solid rgba(177, 156, 217, 0.5); } /* Lavender - culture/art */
+.quartiere-collezionisti { border-left: 3px solid rgba(212, 175, 55, 0.4); } /* Gold - treasures */
+.quartiere-alchimisti { border-left: 3px solid rgba(168, 197, 221, 0.5); } /* Light blue - alchemy */
+.quartiere-tessitori { border-left: 3px solid rgba(216, 191, 216, 0.5); } /* Thistle - fabrics */
+.quartiere-giardini { border-left: 3px solid rgba(144, 238, 144, 0.4); } /* Light green - nature */
+.quartiere-librai { border-left: 3px solid rgba(147, 112, 219, 0.5); } /* Medium purple - knowledge */
+.quartiere-mercato { border-left: 3px solid rgba(192, 192, 192, 0.6); } /* Silver - commerce */
+.quartiere-scuole { border-left: 3px solid rgba(135, 206, 250, 0.5); } /* Sky blue - education */
+
+/* Locations Argento */
+.location-argento {
+    border-left: 3px solid rgba(192, 192, 192, 0.4);
+}
+
+.location-argento h2 {
+    color: var(--accent-silver-blue);
+}
+
+/* Organizzazioni Argento */
+.org-argento {
+    border-left: 3px solid rgba(168, 197, 221, 0.5);
+}
+
+.org-argento h2 {
+    color: var(--accent-lavender);
+}
 
 /* ==========================================
    BOOK PAGE - Clean Reading Experience
